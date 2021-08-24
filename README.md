@@ -1,6 +1,6 @@
 # Quotes
 -  This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.1.
-#### By **Eudes Charles**
+#### By **Mary Muthoni**
 ## Description
 - This is a webapp created by carbon that allows you to create a quote to inspire and motivateeveryone.
 ## Setup/Installation Requirements
@@ -38,4 +38,4 @@ To fix a bug or enhance an existing module, follow these steps:
 Link to the site : https://festive-cray-95d506.netlify.app
 
 ### License
-The MIT licence Copyright (c)2019
+The MIT licence Copyright (c)2021
