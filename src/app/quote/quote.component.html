@@ -1,0 +1,68 @@
+<div class="container-fluid">
+  
+    <div class="d-flex justify-content-center">
+      <div class="" style=" width: 20vw; height: auto;">
+        <img src="./assets/images/78e07a5434157fdf120340603f830943.jpg" class="img-fluid" alt="">
+
+      </div>
+      <div class="" style="border-left: 0.1vw solid white; width: 20vw; height: auto; padding-left: 1vw;">
+        <div>
+          <h1 style="font-family: 'Merienda', cursive; color: rgba(255, 0, 0, 0.924); text-shadow: 2px 2px 3px black;">
+            Quotes
+          </h1>
+          <p style="font-size: 1.3vw; color:rgb(255, 27, 10);  font-family: 'Kaushan Script', cursive; text-shadow: 2px 2px 4px black;">
+            for you
+          </p>
+        </div>
+        <p style="font-size: 1.3vw; color:wheat; font-family: 'Kaushan Script', cursive;">
+            Home is where love resides, where memories are created , friends are always  welcome and laughter ner ends as we welcome you to our angular qoutes app
+        </p>
+        <button type="button" class="btn btn-outline-danger" (click)="toggleForm()" style="color: #f1eded !important;
+          border: 2px solid #dee2e6 !important; border-radius: 2vw; font-family: 'Merienda', cursive; " data-mdb-ripple-color="dark">
+            Make your own quote
+        </button>
+      </div> 
+      <div class=" animated fadeInDown" style="animation-delay:0.8s; width: 20vw; margin-left: 1vw;" *ngIf="showForm">
+        <form #form ="ngForm" (ngSubmit)="submit(form.value, form)"> 
+          <!-- Name input -->
+          <div class="form-outline mb-4 animated fadeInDown" style="animation-delay:0.8s;">
+            <input type="name" name="name" id="form4Example1" class="form-control" placeholder="Auther's Name" ngModel/>
+          </div>
+        
+          <!-- Email input -->
+          <div class="form-outline mb-4 animated fadeInDown" style="animation-delay:0.8s;">
+            <input type="title" name="title" id="form4Example2"  ngModel class="form-control" placeholder="Quote Title"/>
+          </div>
+        
+          <!-- Message input -->
+          <div class="form-outline mb-4 animated fadeInDown" style="animation-delay:0.8s;">
+            <textarea class="form-control" type="quote" name="quote"  ngModel id="form4Example3" rows="4" placeholder="Quote Message"></textarea>
+          </div>
+        
+          <!-- Checkbox -->
+          <!-- <div class="form-outline mb-4">
+            <input type="auther" name="auther" style="font-family: 'Merienda', cursive;" placeholder="Auther's Name">
+          </div> -->
+          <div class="form-check d-flex justify-content-between mb-4 animated fadeInDown" style="animation-delay:0.8s;">
+            <input
+                class="form-check-input me-2 m-8"  
+                type="checkbox"
+                value=""
+                id="form4Example4"
+                checked 
+              />
+            <label class="form-check-label" for="form4Example4" style="color: rgb(253, 253, 253); font-family: 'Kaushan Script', cursive;">
+              Send me a copy of this message
+            </label>
+          
+          </div>
+        
+          <!-- Submit button -->
+          <button type="submit" class="btn btn-danger btn-rounded text-center animated fadeInDown" style=" animation-delay:1.0s; background-color: red; width: auto; font-family: 'Merienda', cursive;">Create quote</button>
+          
+        </form>
+      </div>
+    </div>
+</div>
+
+

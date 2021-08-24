@@ -1,0 +1,49 @@
+<app-quote (kelly)="loga($event)"></app-quote>
+<div class="container">
+    <div class="row">
+
+      <div class="col-sm-4 mb-1" *ngFor="let blessing of bless; let i=index">
+        <div class="card btn-outline-danger" style=" border: 2px solid #dee2e6 !important;;">
+          <div class="card-body">
+            <div>
+              <div>
+                <h5 class="card-title" style="font-family: 'Merienda', cursive; color: rgba(255, 0, 0, 0.924); text-shadow: 2px 2px 3px black; font-size: 1.3vw;">{{blessing.title}}</h5>
+              </div>
+              <div>
+                <p class="card-text" style="font-size: 1.3vw; color:wheat; font-family: 'Kaushan Script', cursive;">
+                  {{blessing.quote}}.
+                </p>
+
+                <p style="color:rgb(224, 224, 224); font-family: 'Merienda', cursive;">by: {{blessing.name}}</p>
+              </div>
+
+            </div>
+           
+            <div >
+              <app-vote [time]="blessing" *ngIf="blessing.readMore"></app-vote>
+            </div>
+            <div>
+              <button class="btn btn-primary" (click)="toggleReadMore(i)" style="background-color: #f24846 !important; font-family: 'Merienda', cursive; text-shadow: 2px 2px 3px black; font-size: 1.0vw;">Read more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+    </div>
+</div>
+
+<footer class="text-center text-white fixed-bottom" style="background-color:rgba(0,0,0,0.8); position: static;">
+  <!-- Grid container -->
+  <div class="container p-4"></div>
+  <!-- Grid container -->
+
+  <!-- Copyright -->
+  <div class="text-center p-3" style="background-color:rgba(0,0,0,0.8);">
+    <span style="color: rgba(255, 0, 0, 0.924); text-shadow: 2px 2px 3px black; font-size: 1.3vw;">©</span>  <span style="font-family: 'Merienda', cursive; text-shadow: 2px 2px 3px black; font-size: 1.3vw;"> 2021 Copyright:</span>
+    <a class="text-white" href="https://mdbootstrap.com/"> <span style="color: rgba(255, 0, 0, 0.924); text-shadow: 2px 2px 3px black; font-size: 1.3vw;"> @</span> <span style="font-family: 'Kaushan Script', cursive; text-shadow: 2px 2px 3px black; font-size: 1.3vw;"> Carbon Entertaiment </span> <i class="fas fa-grin-beam-sweat" style="color: yellow; font-size: 1.3vw;"></i></a>
+  </div>
+  <!-- Copyright -->
+</footer>
+
+
